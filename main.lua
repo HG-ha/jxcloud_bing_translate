@@ -3,9 +3,7 @@ local msgdist = require("msgdist")
 
 -- 主函数
 function main(event)
-    local combined = string.format("消息类型: %s", event.t)
-    log.info(combined)
-    log.info(event)
+
     -- 频道内@
     if event.t == "AT_MESSAGE_CREATE" and msgdist.AT_MESSAGE_CREATE then
         return msgdist.AT_MESSAGE_CREATE(event)
