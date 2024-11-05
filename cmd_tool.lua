@@ -37,7 +37,7 @@ function CommandHandler:load_command()
 end
 
 -- 检查是否为命令
-function CommandHandler:is_command_prefix(message, at, group, c2c, data)
+function CommandHandler:is_command_prefix(message, at, group, c2c)
 
     -- 遍历 cmd_list，检查是否匹配
     for cmd, original_command in pairs(self.cmd_list) do
